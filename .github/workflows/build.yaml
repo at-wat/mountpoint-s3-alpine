@@ -19,6 +19,7 @@ jobs:
           - '3.22'
           - '3.23'
           - '3.24'
+    steps:
       - name: Checkout
         uses: actions/checkout@v7
       - name: Setup QEMU
