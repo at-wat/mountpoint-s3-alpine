@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "ARG ALPINE_VERSION=(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "alpine",
+      "versioningTemplate": "docker"
+    },
+    {
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "ARG MOUNTPOINT_S3_VERSION=(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "awslabs/mountpoint-s3",
+      "versioningTemplate": "semver"
+    }
+  ]
+}
