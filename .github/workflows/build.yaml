@@ -31,8 +31,6 @@ jobs:
           driver-opts: network=host
       - name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
-      - name: Run local registry
-        run: docker run -d -p 5000:5000 --restart=always --name registry registry:2
 
       - name: Docker build
         run: |
