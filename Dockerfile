@@ -11,7 +11,7 @@ RUN apk add --no-cache \
     cmake \
     libunwind-dev
 
-ARG MOUNTPOINT_S3_VERSION=v1.22.3
+ARG MOUNTPOINT_S3_VERSION=v1.23.0
 ENV RUSTFLAGS="-C target-feature=-crt-static"
 
 RUN git clone --depth=1 -b ${MOUNTPOINT_S3_VERSION} https://github.com/awslabs/mountpoint-s3 /work/mountpoint-s3
